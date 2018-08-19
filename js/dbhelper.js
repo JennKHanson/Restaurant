@@ -1,16 +1,27 @@
 /**
  * Common database helper functions.
  */
+
+ //static method: https://medium.com/@yyang0903/static-objects-static-methods-in-es6-1c026dbb8bb1
 class DBHelper {
 
   /**
    * Database URL.
    * Change this to restaurants.json file location on your server.
    */
+
+   static get DATABASE_URL() {
+     const port = 8000 // Change this to your server port
+     return `http://localhost:${port}/data/restaurants.json`;
+   }
+
+
   static get DATABASE_URL() {
     const port = 8000 // Change this to your server port
     return `http://localhost:${port}/data/restaurants.json`;
   }
+
+
 
   /**
    * Fetch all restaurants.
@@ -28,7 +39,7 @@ class DBHelper {
         callback(error, null);
       }
     };
-    xhr.send();
+  xhr.send();
   }
 
   /**
@@ -157,7 +168,7 @@ class DBHelper {
    * Map marker for a restaurant.
    */
    static mapMarkerForRestaurant(restaurant, map) {
-    // https://leafletjs.com/reference-1.3.0.html#marker  
+    // https://leafletjs.com/reference-1.3.0.html#marker
     const marker = new L.marker([restaurant.latlng.lat, restaurant.latlng.lng],
       {title: restaurant.name,
       alt: restaurant.name,
@@ -165,7 +176,7 @@ class DBHelper {
       })
       marker.addTo(newMap);
     return marker;
-  } 
+  }
   /* static mapMarkerForRestaurant(restaurant, map) {
     const marker = new google.maps.Marker({
       position: restaurant.latlng,
@@ -178,4 +189,3 @@ class DBHelper {
   } */
 
 }
-
