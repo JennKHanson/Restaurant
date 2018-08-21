@@ -201,7 +201,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 
 }
 
-//was commented out
+/*
 addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
@@ -212,3 +212,17 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 }
+*/
+//Register Service Worker
+/*
+if ('serviceWorker' in navigator){
+
+  navigator.serviceWorker
+    .register('./service-worker.js', {scope: './'})
+    .then(function(registration){
+      console.log("Service Worker Registered", registration);
+    })
+    .catch(function(err) {
+      console.log("Service Worker Failed to Register", err);
+    });
+  }*/

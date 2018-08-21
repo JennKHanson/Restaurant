@@ -1,22 +1,4 @@
 
-// Registering Service Worker
-//https://developers.google.com/web/fundamentals/primers/service-workers/registration
-if ('serviceWorker' in navigator){
-    window.addEventListener('load', function(){
-      navigator.serviceWorker.register('./service-worker.js', {scope: './'})
-
-    .then(function(reg){
-      console.log("Service Worker Registered", reg);
-    })
-    .catch(function(err) {
-      console.log("Service Worker Failed to Register", err);
-    })
-    });
-  }
-
-//
-
-
 /**
  * Common database helper functions.
  */
@@ -33,14 +15,6 @@ class DBHelper {
      const port = 8000 // Change this to your server port
      return `http://localhost:${port}/data/restaurants.json`;
    }
-
-
-  static get DATABASE_URL() {
-    const port = 8000 // Change this to your server port
-    return `http://localhost:${port}/data/restaurants.json`;
-  }
-
-
 
   /**
    * Fetch all restaurants.
