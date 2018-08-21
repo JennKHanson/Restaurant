@@ -4,6 +4,8 @@ let restaurants,
 var newMap
 var markers = []
 
+
+
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
@@ -209,4 +211,4 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     });
     self.markers.push(marker);
   });
-} 
+}
