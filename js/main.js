@@ -90,7 +90,8 @@ initMap = () => {
 
   updateRestaurants();
 }
-/* window.initMap = () => {
+/*
+  window.initMap = () => {
   let loc = {
     lat: 40.722216,
     lng: -73.987501
@@ -213,7 +214,10 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 }
 */
+
 //Register Service Worker
+
+
 /*
 if ('serviceWorker' in navigator){
 

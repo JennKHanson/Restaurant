@@ -1,4 +1,4 @@
-if ('serviceWorker' in navigator){
+/*if ('serviceWorker' in navigator){
 
   navigator.serviceWorker
     .register('./service-worker.js', {scope: './'})
@@ -8,4 +8,4 @@ if ('serviceWorker' in navigator){
     .catch(function(err) {
       console.log("Service Worker Failed to Register", err);
     })
-  }
+  }*/

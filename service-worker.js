@@ -1,7 +1,7 @@
 //self.addEventListener('fetch', function(){
-//  fetchRestaurants();
+  //fetchRestaurants();
 //})
-/*
+
 const cacheName = 'restaurant-pages';
 const cachedURLs = [
   '/',
@@ -25,6 +25,7 @@ const cachedURLs = [
     '/data/restaurants.json'
 ];
  //service worker
+/*
 self.addEventListener('install', function(e) {
     console.log('service worker installed');
     e.waitUntil(
@@ -45,5 +46,4 @@ self.addEventListener('install', function(e) {
 	    return caches.match(e.request);
 	})
 	    );
-})
-*/
+});*/
