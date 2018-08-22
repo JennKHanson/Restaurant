@@ -1,118 +1,109 @@
 
 
 /* == DESKTOPS, SOME LAPTOPS, IPAD === */
-/*
+
 @media screen and (min-width: 950px) {
-  #nav, h1, .filter-options {
-
-
-
-/*
-  #maincontent{flex: 2 0px}
-  #nav {order: 1}
-  #map{order: 2}
-  #neighborhoodselect{order:3}
-  #cuisineselect{order:4}
-  #footer{order:5}
-*/
-
-/* === TABLETS === */
-
-@media screen and (min-width: 721px) {
-  #maincontent {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    }
-
-  #nav {
-    display: flex;
-  }
-
-  .main-title {
-    font-size: 1.25em;
-    letter-spacing: 2.5px;
+#maincontent {
+  display: flex;
+  flex-direction: row;
 
   }
 
-  .restaurants {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
+#nav {
+  display: flex;
+}
 
-  #restaurants-list {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
+.main-title {
+  font-size: 1.25em;
+  letter-spacing: 2.5px;
 
-  }
-  #restaurants-list ul {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+}
 
-  }
+.restaurants {
 
-  li {
-    margin-right: auto;
-    margin-left: auto;
+}
 
-  }
-
-  .filter-options {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    /*margin-right: auto;
-    margin-left: auto;*/
-    height: 70px;
-    justify-content: center;
-
-  }
-
-  .filter-options select {
-    font-size: 11pt;
-    height: 25px;
-    letter-spacing: 0;
-    margin: 5px;
-    /*padding: 0 10px;*/
-    padding-top: 10px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    width: 200px;
-
-  }
+#restaurants-list {
+margin-left: auto;
+margin-right: auto;
+padding-left: 0;
+padding-right: 0;
 
 
-  h2 {
-    /*display: flex;
-    flex-wrap: wrap;*/
-    font-size: 1.5em;
-    letter-spacing: 1.5px;
-    width: 100%;
-    justify-content: center;
-    margin-top: 5px;
-    margin-bottom: 1px;
-    padding-right: -20px;
-    text-align: center;
-  }
 
-  #cuisines-select {
-    margin-right: 40px;
-  }
+}
 
-  #neighborhoods-select {
-    margin-right: 30px;
-  }
+#restaurants-list ul {
 
-  footer {
-    padding: 20px;
-    width: 100%;
+}
 
-  }
-  }
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /*margin-right: auto;
+  margin-left: auto;*/
+  height: 70px;
+  justify-content: center;
+
+}
+
+.filter-options select {
+  font-size: 11pt;
+  height: 25px;
+  letter-spacing: 0;
+
+  /*padding: 0 10px;*/
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 200px;
+
+}
+
+
+h2 {
+  /*display: flex;
+  flex-wrap: wrap;*/
+  font-size: 1.5em;
+  letter-spacing: 1.5px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 1px;
+  padding-right: -20px;
+  text-align: center;
+}
+
+#cuisines-select {
+  margin-right: 40px;
+}
+
+#neighborhoods-select {
+  margin-right: 30px;
+}
+
+footer {
+  padding: 20px;
+  width: 100%;
+
+}
+
+/* == restaurant == */
+#restaurant-name {
+  font-size: 1em;
+  color: #f18200;
+  font-family: Arial,sans-serif;
+  /*font-size: 20pt;*/
+  font-weight: 200;
+  letter-spacing: 0;
+  margin: 15px 0 30px;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+}
 
 
 
@@ -209,27 +200,139 @@ h2 {
 }
 
 footer {
+  display: table;
   padding: 10px;
   width: 100%;
 }
 }
+/*
+  #maincontent{flex: 2 0px}
+  #nav {order: 1}
+  #map{order: 2}
+  #neighborhoodselect{order:3}
+  #cuisineselect{order:4}
+  #footer{order:5}
+*/
+
+/* === TABLETS === */
+
+@media screen and (min-width: 721px) {
+  #maincontent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    }
+
+
+  #nav {
+    display: flex;
+  }
+
+  .main-title {
+    font-size: 1.25em;
+    letter-spacing: 2.5px;
+
+  }
+
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  #restaurants-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+
+  }
+  #restaurants-list ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+  }
+
+  li {
+    margin-right: auto;
+    margin-left: auto;
+
+  }
+
+  .filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    /*margin-right: auto;
+    margin-left: auto;*/
+    height: 70px;
+    justify-content: center;
+
+  }
+
+  .filter-options select {
+    font-size: 11pt;
+    height: 25px;
+    letter-spacing: 0;
+    margin: 5px;
+    /*padding: 0 10px;*/
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 200px;
+
+  }
+
+
+  h2 {
+    /*display: flex;
+    flex-wrap: wrap;*/
+    font-size: 1.5em;
+    letter-spacing: 1.5px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 1px;
+    padding-right: -20px;
+    text-align: center;
+  }
+
+  #cuisines-select {
+    margin-right: 40px;
+  }
+
+  #neighborhoods-select {
+    margin-right: 30px;
+  }
+
+  footer{
+    display: table;
+    padding: 20px;
+    width: 100%;
+
+  }
+  }
+
+
 
 
 /* === CELL PHONES AND SOME TABLETS === */
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 720px){
 #maincontent {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   }
 
+
 #nav {
   display: flex;
-
 }
+
 .main-title {
-  font-size: .75em;
+  font-size: 1.25em;
   letter-spacing: 2.5px;
 
 }
@@ -260,13 +363,14 @@ li {
 
 }
 
+
 .filter-options {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   width: 100%;
   /*margin-right: auto;
   margin-left: auto;*/
-  height: 50px;
+  height: 120px;
   justify-content: center;
 
 }
@@ -288,26 +392,148 @@ li {
 h2 {
   /*display: flex;
   flex-wrap: wrap;*/
-  font-size: 1em;
+  font-size: 1.5em;
   letter-spacing: 1.5px;
   width: 100%;
   justify-content: center;
   margin-top: 5px;
   margin-bottom: 1px;
+  padding-right: -20px;
   text-align: center;
 }
 
 #cuisines-select {
+  width: 100%;
   margin-right: 20px;
+  margin-left: 20px;
 }
 
 #neighborhoods-select {
-  margin-right: 10px;
+  width: 100%;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#footer {
+  display: table;
+  padding: 10px;
+}
+}
+
+
+/* === CELL PHONES AND SOME TABLETS === */
+
+@media screen and (max-width: 550px){
+#maincontent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  }
+
+#nav {
+  display: flex;
+
+}
+.main-title {
+  font-size: .75em;
+  letter-spacing: 2.5px;
+
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+/*
+#restaurants-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+
+}
+#restaurants-list ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+li {
+  margin-right: auto;
+  margin-left: auto;
+
+}*/
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /*margin-right: auto;
+  margin-left: auto;*/
+  height: 120px;
+  justify-content: center;
+
+}
+
+.filter-options select {
+  font-size: 11pt;
+  height: 25px;
+  letter-spacing: 0;
+  margin: 5px;
+  /*padding: 0 10px;*/
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+
+}
+
+
+h2 {
+  /*display: flex;
+  flex-wrap: wrap;*/
+  font-size: 1.25em;
+  letter-spacing: 1.5px;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10px;
+}
+
+#cuisines-select {
+  width: 100%;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#neighborhoods-select {
+  width: 100%;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 footer {
   padding: 10px;
   width: 100%;
+}
+
+#restaurant-name {
+  font-size: 1em;
+  color: #f18200;
+  font-family: Arial,sans-serif;
+  /*font-size: 20pt;*/
+  font-weight: 200;
+  letter-spacing: 0;
+  margin: 15px 0 30px;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+#restaurant-img {
+width: 60%;
+height: 60%;
 }
 }
 

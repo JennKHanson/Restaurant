@@ -113,7 +113,7 @@ nav h1 a {
 }
 .filter-options h2 {
   color: white;
-  
+
   font-weight: normal;
   line-height: 1;
   margin: 0 20px;
@@ -176,11 +176,12 @@ nav h1 a {
   color: #fff;
   /*display: inline-block;*/
   font-size: 10pt;
-  /*margin: 15px 0 0;*/
-  /*padding: 8px 30px 10px;*/
+  margin: 15px 0 0;
+  padding: 8px 20px 10px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+
 }
 
 /* ====================== Restaurant Details ====================== */
@@ -220,7 +221,8 @@ nav h1 a {
 
 }
 #restaurant-img {
-	/*width: 90%;*/
+	width: 90%;
+
 }
 #restaurant-address {
   font-size: 12pt;
