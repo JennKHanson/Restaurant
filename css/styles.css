@@ -38,7 +38,8 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 #maincontent {
   background-color: #f3f3f3;
-  min-height: 100%;
+  /*min-height: 100%;*/
+
 }
 #footer {
   background-color: #444;
@@ -46,8 +47,8 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   font-size: 8pt;
   letter-spacing: 1px;
   padding: 15px;
-  text-align: center;
   text-transform: uppercase;
+	width: 100%;
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -55,6 +56,15 @@ nav {
   height: 80px;
   background-color: #252831;
   text-align:center;
+
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 2;
 }
 nav h1 {
   margin: auto;
@@ -104,6 +114,7 @@ nav h1 a {
   height: 400px;
   width: 100%;
   background-color: #ccc;
+	z-index: 1;
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
@@ -111,13 +122,14 @@ nav h1 a {
   height: 100%;
   background-color: #3397DB;
   align-items: center;
+
 }
 .filter-options h2 {
   color: white;
-
   font-weight: normal;
   line-height: 1;
-  margin: 0 20px;
+  margin: 7px 20px;
+	text-align: center;
 }
 .filter-options select {
   background-color: white;
@@ -129,9 +141,16 @@ nav h1 a {
   margin: 10px;
   padding: 0 10px;
   width: 200px;
+
 }
 
 /* ====================== Restaurant Listing ====================== */
+.restaurants {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
 #restaurants-list {
   background-color: #f3f3f3;
   list-style: outside none none;
@@ -141,6 +160,7 @@ nav h1 a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
 }
 #restaurants-list li {
   background-color: #fff;
@@ -160,6 +180,7 @@ nav h1 a {
   max-width: 100%;
   min-height: 248px;
   min-width: 100%;
+
 }
 #restaurants-list li h1 {
   color: #f18200;
@@ -179,7 +200,7 @@ nav h1 a {
   background-color: orange;
   border-bottom: 3px solid #eee;
   color: #fff;
-  /*display: inline-block;*/
+  display: inline-block;
   font-size: 10pt;
   margin: 15px 0 0;
   padding: 8px 20px 10px;
@@ -263,6 +284,7 @@ nav h1 a {
   text-transform: uppercase;
 	width: 100%;
 
+
 }
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
@@ -302,6 +324,8 @@ nav h1 a {
 #reviews-list li p {
   margin: 0 0 10px;
 }
+
+#reviews-list
 #restaurant-hours td {
   color: #666;
 
