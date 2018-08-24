@@ -201,11 +201,11 @@ nav h1 a {
   position: fixed;
   right: 0;
   top: 80px;
-  width: 100%;
+  width: 50%;
 }
 .inside #map {
   background-color: #ccc;
-  height: auto;
+  height: 100%;
 	width: 100%;
 
 }
