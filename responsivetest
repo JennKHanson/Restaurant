@@ -275,8 +275,8 @@ h2 {
 }
 
 #footer {
-  /*display: table;
-  padding: 10px;*/
+  display: table;
+  padding: 10px;
 }
 }
 
@@ -290,30 +290,71 @@ h2 {
   flex-wrap: wrap;
   }
 
-.main-title {
-  font-size: 1em;
-  letter-spacing: 2.5px;
+#nav {
+  display: flex;
+
 }
-.inside #map-container {
-  max-width: 100px;
+.main-title {
+  font-size: .75em;
+  letter-spacing: 2.5px;
+
 }
 
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+/*
+#restaurants-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+
+}
+#restaurants-list ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+li {
+  margin-right: auto;
+  margin-left: auto;
+
+}*/
 
 .filter-options {
-  height: 110px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /*margin-right: auto;
+  margin-left: auto;*/
+  height: 120px;
   justify-content: center;
-  padding-bottom: 15px;
+
 }
 
 .filter-options select {
   font-size: 11pt;
-  height: 20px;
+  height: 25px;
   letter-spacing: 0;
+  margin: 5px;
+  /*padding: 0 10px;*/
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 200px;
 
 }
 
+
 h2 {
-  font-size: 1.5em;
+  /*display: flex;
+  flex-wrap: wrap;*/
+  font-size: 1.25em;
   letter-spacing: 1.5px;
   width: 100%;
   justify-content: center;
@@ -323,22 +364,46 @@ h2 {
 
 #cuisines-select {
   width: 100%;
-  max-width: 300px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 #neighborhoods-select {
   width: 100%;
-  max-width: 300px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
-#footer {
+footer {
+  padding: 10px;
   width: 100%;
-  display: flex;
-	flex-direction: column; /* column for mobile */
-  align-content: center;
-  text-align: center;
 }
 
-
-
+#restaurant-name {
+  font-size: 1em;
+  color: #f18200;
+  font-family: Arial,sans-serif;
+  /*font-size: 20pt;*/
+  font-weight: 200;
+  letter-spacing: 0;
+  margin: 15px 0 30px;
+  text-transform: uppercase;
+  line-height: 1.1;
 }
+
+#restaurant-img {
+width: 40%;
+height: 40%;
+}
+}
+
+/*{
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+  }*/

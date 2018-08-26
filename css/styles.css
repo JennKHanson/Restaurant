@@ -39,6 +39,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 #maincontent {
   background-color: #f3f3f3;
+
   /*min-height: 100%;*/
 }
 
@@ -50,6 +51,10 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   padding: 15px;
   text-transform: uppercase;
 	width: 100%;
+	display: flex;
+	flex-direction: row; /* column for mobile */
+	justify-content: center;
+
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -65,8 +70,8 @@ nav {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	z-index: 2;
 }
+
 nav h1 {
   margin: auto;
 }
@@ -77,14 +82,13 @@ nav h1 a {
   letter-spacing: 10px;
   text-transform: uppercase;
 }
-#breadcrumb {
 
+#breadcrumb {
 		padding: 10px 40px 16px;
     list-style: none;
     background-color: #eee;
     font-size: 17px;
-		margin-top: 60px;
-    margin: 0;
+		margin-top: 80px;
 		width: 100%;
     /*width: calc(50% - 80px);*/
 		text-align: center;
@@ -114,6 +118,11 @@ nav h1 a {
     text-decoration: underline;
 }
 /* ====================== Map ====================== */
+
+#map-container {
+	margin-top: -175px;
+}
+
 #map {
   height: 400px;
   width: 100%;
@@ -125,14 +134,15 @@ nav h1 a {
   width: 100%;
   height: 100%;
   background-color: #3397DB;
-  align-items: center;
 
 }
+
+
 .filter-options h2 {
   color: white;
   font-weight: normal;
   line-height: 1;
-  margin: 7px 20px;
+  margin: 7px auto;
 	text-align: center;
 }
 .filter-options select {
@@ -142,9 +152,10 @@ nav h1 a {
   font-size: 11pt;
   height: 35px;
   letter-spacing: 0;
-  margin: 10px;
+	margin: 10px;
   padding: 0 10px;
   width: 200px;
+
 
 }
 
@@ -224,7 +235,7 @@ nav h1 a {
 	align-items: center;
 }
 #maincontent {
-	margin-top: 200px;
+	margin-top: 255px;
 }
 
 #breadcrumb {
@@ -239,7 +250,7 @@ nav h1 a {
   right: 0;
 	margin-left: auto;
 	margin-right: auto;
-
+	margin-top: -120px;
   width: 100%;
 	max-width: 800px;
 
@@ -251,13 +262,22 @@ nav h1 a {
 	z-index: 1;
 
 }
+
 .inside #footer {
   bottom: 0;
   position: absolute;
   width: 100%;
-	align-items: center;
+	font-size: 8pt;
+	letter-spacing: 1px;
+	padding: 15px;
+	text-transform: uppercase;
+	width: 100%;
+	display: flex;
+	flex-direction: row; /* column for mobile */
+	justify-content: center;
 
 }
+
 #restaurant-name {
   color: #f18200;
   font-family: Arial,sans-serif;
