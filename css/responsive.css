@@ -6,45 +6,31 @@
 
 
 #maincontent {
-  display: flex;
-  flex-direction: row;
 
   }
 
 #nav {
-  display: flex;
+
 }
 
 .main-title {
   letter-spacing: 2.5px;
 
 }
-
+/*
 #restaurants-list {
-margin-left: auto;
-margin-right: auto;
-padding-left: 0;
-padding-right: 0;
+
 
 }
-
+*/
 .filter-options {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 70px;
-  justify-content: center;
+
 
 }
 
 .filter-options select {
-  font-size: 11pt;
-  height: 25px;
-  letter-spacing: 0;
-  padding-top: 10px;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  width: 200px;
+
+
 
 }
 
