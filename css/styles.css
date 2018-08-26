@@ -32,6 +32,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 20px;
 }
+
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: flex;
 	/*was block */
@@ -39,8 +40,8 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: #f3f3f3;
   /*min-height: 100%;*/
-
 }
+
 #footer {
   background-color: #444;
   color: #aaa;
@@ -77,12 +78,15 @@ nav h1 a {
   text-transform: uppercase;
 }
 #breadcrumb {
+
 		padding: 10px 40px 16px;
     list-style: none;
     background-color: #eee;
     font-size: 17px;
+		margin-top: 60px;
     margin: 0;
-    width: calc(50% - 80px);
+		width: 100%;
+    /*width: calc(50% - 80px);*/
 		text-align: center;
 }
 
