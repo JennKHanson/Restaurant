@@ -76,6 +76,9 @@ font-size: 1.25em;
     width: 400px;
 
   }
+  #restaurant-cuisine {
+    width: 400px;
+  }
   #restaurant-container {
     width: 100%;
     max-width: 400px;

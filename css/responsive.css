@@ -13,78 +13,76 @@
 /* == DESKTOPS, SOME LAPTOPS, IPAD === */
 
 @media screen and (min-width: 950px) {
-  #maincontent {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-left: auto;
-    margin-right:
-    }
-
-  #nav {
-    display: flex;
+#maincontent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   }
 
-  .main-title {
-    font-size: 1.25em;
-    letter-spacing: 2.5px;
-  }
-  .filter-options {
-    height: 100px;
-    text-align: center;
-  }
-  #restaurant-img {
-    width: 50%;
-  }
+.main-title {
+  font-size: 1.25em;
+  letter-spacing: 2.5px;
+}
 
-  .restaurants {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
+#nav {
+  display: flex;
+}
 
-  #restaurants-list {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
+.filter-options {
+  height: 100px;
+  text-align: center;
+}
 
-  }
-
-  #restaurants-list ul {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-  }
-
-  li {
-    margin-right: auto;
-    margin-left: auto;
-
-  }
 .filter-options h2 {
   font-size: 2em;
 }
 
+#neighborhoods-select {
+  width: 100%;
+  max-width: 300px;
+}
 
-  #cuisines-select {
-    width: 100%;
-    max-width: 300px;
 
-  }
+#cuisines-select {
+  width: 100%;
+  max-width: 300px;
 
-  #neighborhoods-select {
-    width: 100%;
-    max-width: 300px;
-  }
+}
 
-  footer {
-    display: table;
-    padding: 20px;
-    width: 100%;
 
-  }
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+#restaurants-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+
+}
+
+#restaurants-list ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+li {
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+footer {
+  display: table;
+  padding: 20px;
+  width: 100%;
+
+}
   }
 
 
@@ -100,7 +98,6 @@
   margin-left: auto;
   margin-right: auto;
   }
-
 
 #nav {
   display: flex;
@@ -124,11 +121,13 @@
 
 #restaurants-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
   width: 100%;
   justify-content: center;
 
 }
+
 
 #restaurants-list ul {
   display: flex;
@@ -159,6 +158,7 @@ li {
 }
 
 }
+
 @media screen and (min-width: 551px) and (max-width: 720px){
   #maincontent {
     display: flex;
@@ -262,6 +262,7 @@ h2 {
 #restaurants-list li {
   width: 100%;
   max-width: 300px;
+
 }
 
 
