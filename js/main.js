@@ -4,7 +4,7 @@ let restaurants,
 var newMap
 var markers = []
 
-
+/*An image taken at ${restaurant.name} Restaurant in ${restaurant.neighborhood} in New York City, NY.*/
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
@@ -179,12 +179,14 @@ createRestaurantHTML = (restaurant) => {
   address.innerHTML = restaurant.address;
   li.append(address);
 
-  const more = document.createElement('button');
+  const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
   more.tabIndex ='0';
   li.append(more);
   return (li)
+
+  
 }
 
 /**

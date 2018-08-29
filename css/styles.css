@@ -220,7 +220,7 @@ nav h1 a {
   margin: 0;
   font-size: 11pt;
 }
-#restaurants-list li button {
+#restaurants-list li a {
   background-color: #0d47a1;
   border-bottom: 3px solid #eee;
 	border-radius: 5px;
@@ -233,7 +233,7 @@ nav h1 a {
   text-decoration: none;
   text-transform: uppercase;
 }
-#restaurants-list li button:hover{
+#restaurants-list li a:hover{
 	background-color: #252831;
 
 }
