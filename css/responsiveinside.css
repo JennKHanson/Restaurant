@@ -169,12 +169,17 @@ font-size: 1.25em;
   letter-spacing: 2.5px;
 }
 
+.hiddenLink {
+  font-size: .75em;
+}
+
 #restaurant-container {
   width: 100%;
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
 }
+
 #reviews-container h2 {
   font-size: .1em;
 }

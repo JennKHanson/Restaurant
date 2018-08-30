@@ -201,6 +201,10 @@ li {
   font-size: 1em;
   letter-spacing: 2.5px;
 }
+
+.hiddenLink {
+  font-size: .75em;
+}
 .inside #map-container {
   width: 100%;
 
