@@ -17,16 +17,16 @@
 <body>
   <header>
     <nav>
-      <h1><a href="/" tabindex="-1" class="main-title">Restaurant Reviews</a></h1>
-
+      <h1><a href="/" class="main-title">Restaurant Reviews</a></h1>
+        <a href="#restaurants" class="hiddenLink" tabindex-"-1">Take me to restaurant list</a>
     </nav>
   </header>
   <main id="maincontent">
-    <section id="map-container" >
+    <section id="map-container" tabindex="-1">
       <div tabindex="0" id="map" role="application" aria-label="Map with restaurant locations"></div>
     </section>
-    <section class="restaurants"> <!--added class-->
-      <div class="filter-options">
+    <section class="restaurants" id="restaurants"> <!--added class-->
+      <div class="filter-options" id="filter-options">
         <h2 tabindex="0">Filter Results</h2>
         <select tabindex="0" id="neighborhoods-select" role="listbox" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>

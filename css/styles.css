@@ -70,7 +70,6 @@ nav {
   height: 80px;
   background-color: #252831;
   text-align:center;
-
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -125,6 +124,15 @@ nav h1 a {
     color: #01447e;
     text-decoration: underline;
 }
+
+.hiddenLink {
+	color: #252831;
+}
+
+.hiddenLink:focus {
+	color: white;
+}
+
 /* ====================== Map ====================== */
 
 #map-container {
@@ -145,7 +153,6 @@ nav h1 a {
 
 }
 
-
 .filter-options h2 {
   color: white;
   font-weight: normal;
@@ -153,6 +160,9 @@ nav h1 a {
   margin: 7px auto;
 	text-align: center;
 }
+
+
+
 .filter-options select {
   background-color: white;
   border: 1px solid #fff;
@@ -163,7 +173,6 @@ nav h1 a {
 	margin: 8px;
   padding: 0 10px;
   width: 200px;
-
 
 }
 
@@ -235,7 +244,9 @@ nav h1 a {
 }
 #restaurants-list li a:hover{
 	background-color: #252831;
-
+}
+#restaurants-list li a:focus{
+	background-color: #252831;
 }
 
 

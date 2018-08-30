@@ -1,15 +1,6 @@
 @charset "utf-8";
 /* CSS Responsive Home Page Document */
 
-/*
-  #maincontent{flex: 2 0px}
-  #nav {order: 1}
-  #map{order: 2}
-  #neighborhoodselect{order:3}
-  #cuisineselect{order:4}
-  #footer{order:5}
-*/
-
 /* == DESKTOPS, SOME LAPTOPS, IPAD === */
 
 @media screen and (min-width: 950px) {
@@ -18,7 +9,6 @@
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-
   }
 
 .main-title {
