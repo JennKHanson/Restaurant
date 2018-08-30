@@ -97,6 +97,14 @@ nav h1 a {
   text-transform: uppercase;
 }
 
+.main-title {
+  color: #fff;
+  font-size: 14pt;
+  font-weight: 200;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
 #breadcrumb {
 		padding: 10px 40px 16px;
     list-style: none;
@@ -124,6 +132,7 @@ nav h1 a {
 #breadcrumb li a {
     color: #0d47a1;
     text-decoration: none;
+		font-weight: 700;
 }
 
 /* Add a color on mouse-over */
@@ -169,6 +178,8 @@ nav h1 a {
   background-color: #ccc;
 	z-index: 1;
 }
+
+
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
@@ -314,7 +325,7 @@ nav h1 a {
   height: 100%;
   width: 100%;
 	z-index: 1;
-	
+
 }
 
 .inside #footer {

@@ -183,7 +183,7 @@ createRestaurantHTML = (restaurant) => {
   more.href = DBHelper.urlForRestaurant(restaurant);
   more.tabIndex ='0';
   li.append(more);
-  more.alt="Restaurant details opens in new tab."
+  //more.alt="Restaurant details opens in new tab."
 
   return (li)
 

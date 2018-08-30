@@ -56,10 +56,12 @@ font-size: 1.25em;
     margin-left: auto;
     margin-right: auto;
   }
+
   .main-title {
-    font-size: 1.25em;
+    font-size: 2em;
     letter-spacing: 2.5px;
   }
+
   #reviews-container h2 {
       font-size: 2.25em;
       text-align: center;
@@ -96,10 +98,10 @@ font-size: 1.25em;
     margin-right: auto;
   }
 
-  .main-title {
-    font-size: 1.25em;
-    letter-spacing: 2.5px;
-  }
+    .main-title {
+      font-size: 1.5em;
+      letter-spacing: 2.5px;
+    }
 
   #restaurant-cuisine {
     width: 400px;
@@ -165,7 +167,7 @@ font-size: 1.25em;
 }
 
 .main-title {
-  font-size: 1em;
+  font-size: 1.5em;
   letter-spacing: 2.5px;
 }
 
@@ -181,7 +183,7 @@ font-size: 1.25em;
 }
 
 #reviews-container h2 {
-  font-size: .1em;
+  font-size: .5em;
 }
 
 #restaurant-name {
@@ -204,12 +206,10 @@ td {
   font-size: 1.75em;
 }
 
-
 #restaurant-hours {
   width: 100%;
   max-width: 300px;
   font-size: .5em;
-
 }
 
 #reviews-container h2 {
@@ -229,6 +229,7 @@ td {
 	flex-direction: column; /* column for mobile */
   align-content: center;
   text-align: center;
-
 }
+
+
 }
