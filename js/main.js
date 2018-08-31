@@ -151,6 +151,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
     ul.append(createRestaurantHTML(restaurant));
   });
   addMarkersToMap();
+
 }
 
 /**
@@ -182,12 +183,10 @@ createRestaurantHTML = (restaurant) => {
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
   more.tabIndex ='0';
+  more.className = "viewDetails";
   li.append(more);
-  //more.alt="Restaurant details opens in new tab."
 
   return (li)
-
-
 
 }
 
