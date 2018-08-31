@@ -1,31 +1,33 @@
-//self.addEventListener('fetch', function(){
-  //fetchRestaurants();
-//})
+/*self.addEventListener('fetch', function(){
+  fetchRestaurants()
+});*/
 
 const cacheName = 'restaurant-pages';
 const cachedURLs = [
   '/',
   '/css/styles.css',
-  '/js/main.js',
-  '/js/pk.js',
-  '/js/restaurant_info.js',
+  '/css/responsiveinside.css',
+  '/css/styles.css',
+  '/data/restaurants.json',
+  '/img/1.jpg',
+  '/img/2.jpg',
+  '/img/3.jpg',
+  '/img/4.jpg',
+  '/img/5.jpg',
+  '/img/6.jpg',
+  '/img/7.jpg',
+  '/img/8.jpg',
+  '/img/9.jpg',
+  '/img/10.jpg',
   '/js/dbhelper.js',
-    '/index.html',
-    '/restaurant.html',
-    '/img/10.jpg',
-    '/img/1.jpg',
-    '/img/2.jpg',
-    '/img/3.jpg',
-    '/img/4.jpg',
-    '/img/5.jpg',
-    '/img/6.jpg',
-    '/img/7.jpg',
-    '/img/8.jpg',
-    '/img/9.jpg',
-    '/data/restaurants.json'
+  '/js/main.js',
+  '/js/restaurant_info.js',
+  '/index.html',
+  '/restaurant.html',
+
 ];
  //service worker
-/*
+
 self.addEventListener('install', function(e) {
     console.log('service worker installed');
     e.waitUntil(
@@ -46,4 +48,4 @@ self.addEventListener('install', function(e) {
 	    return caches.match(e.request);
 	})
 	    );
-});*/
+});

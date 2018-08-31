@@ -206,7 +206,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 
 }
 
-/*
+/* Google Maps
 addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
@@ -221,8 +221,6 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 
 //Register Service Worker
 
-
-/*
 if ('serviceWorker' in navigator){
 
   navigator.serviceWorker
@@ -233,4 +231,4 @@ if ('serviceWorker' in navigator){
     .catch(function(err) {
       console.log("Service Worker Failed to Register", err);
     });
-  }*/
+  }
