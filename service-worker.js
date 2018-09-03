@@ -9,7 +9,7 @@
 });*/
 
 const cacheName = 'restaurant-pages';
-const cachedURLs = [
+const urlsCache = [
   '/',
   '/css/styles.css',
   '/css/responsiveinside.css',
@@ -32,27 +32,27 @@ const cachedURLs = [
   '/restaurant.html',
 ];
 
- //service worker
+ //service worker install
+ //https://developers.google.com/web/fundamentals/primers/service-workers/
 
-self.addEventListener('install', function(e) {
-    console.log('service worker installed');
-    e.waitUntil(
-	caches.open(cacheName) //open new cache
-	    .then(function(cache) {
-		console.log('cache opened');
-		return cache.addAll(cachedURLs); //add assets to cache
-	    })
-    );
-});
-/*
- self.addEventListener('activate', function(e) {
-    console.log('service worker activated');
-})*/
- self.addEventListener('fetch', function(e) {
-    console.log('service worker fetching');
-    e.respondWith(
-	fetch(e.request).catch(function() {
-	    return caches.match(e.request);
-	})
-	    );
-});
+ self.addEventListener('install', function(e){
+   e.waitUntil(
+     caches.open(cacheName)
+      .then(function(cache) {
+        console.log('cache opened');
+        return cache.addAll(urlsCache);
+      })
+   );
+ });
+
+ self.addEventListener('fetch', function(e){
+   e.respondWith(
+     caches.match(e.request)
+      .then(function(response) {
+        if (response) {
+          return response;
+        }
+        return fetch(e.request);
+      })
+   );
+ });
