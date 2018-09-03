@@ -36,17 +36,22 @@ const urlsCache = [
  //https://developers.google.com/web/fundamentals/primers/service-workers/
 
  self.addEventListener('install', function(e){
+   console.log("[serviceworker] Installed")
    e.waitUntil(
-     caches.open(cacheName)
-      .then(function(cache) {
-        console.log('cache opened');
-        return cache.addAll(urlsCache);
+     caches.open(cacheName).then(function(cache) {
+        console.log("[serviceworker] Caching urlsCache");
+        //return cache.addAll(urlsCache);
       })
-   );
- });
+   )
+ })
+
+self.addEventListener('activate', function(e){
+  console.log("[serviceworker] Activated")
+})
 
  self.addEventListener('fetch', function(e){
-   e.respondWith(
+   console.log("[serviceworker] Fetching", e.request.url);
+   /*e.respondWith(
      caches.match(e.request)
       .then(function(response) {
         if (response) {
@@ -54,5 +59,5 @@ const urlsCache = [
         }
         return fetch(e.request);
       })
-   );
+   );*/
  });
