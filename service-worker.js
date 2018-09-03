@@ -34,6 +34,7 @@ const urlsCache = [
 
  //service worker install
  //https://developers.google.com/web/fundamentals/primers/service-workers/
+ //https://www.youtube.com/watch?v=BfL3pprhnms
 
  self.addEventListener('install', function(e){
    console.log("[serviceworker] Installed")
