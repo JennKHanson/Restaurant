@@ -30,8 +30,8 @@ const cachedURLs = [
   '/js/restaurant_info.js',
   '/index.html',
   '/restaurant.html',
-
 ];
+
  //service worker
 
 self.addEventListener('install', function(e) {
@@ -39,14 +39,15 @@ self.addEventListener('install', function(e) {
     e.waitUntil(
 	caches.open(cacheName) //open new cache
 	    .then(function(cache) {
-		console.log('files cached');
+		console.log('cache opened');
 		return cache.addAll(cachedURLs); //add assets to cache
 	    })
-    )
-})
+    );
+});
+/*
  self.addEventListener('activate', function(e) {
     console.log('service worker activated');
-})
+})*/
  self.addEventListener('fetch', function(e) {
     console.log('service worker fetching');
     e.respondWith(
