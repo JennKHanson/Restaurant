@@ -1,3 +1,9 @@
+
+/**
+ * Service Worker JS
+ */
+
+
 /*self.addEventListener('fetch', function(){
   fetchRestaurants()
 });*/

@@ -1,3 +1,8 @@
+
+/**
+ * Main JS
+ */
+
 let restaurants,
   neighborhoods,
   cuisines
@@ -64,6 +69,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     const option = document.createElement('option');
     option.innerHTML = cuisine;
     option.value = cuisine;
+  /*option.setAttribute('aria-label', "view details of" + restaurant.name);*/
     select.append(option);
   });
 }
@@ -184,6 +190,7 @@ createRestaurantHTML = (restaurant) => {
   more.href = DBHelper.urlForRestaurant(restaurant);
   more.tabIndex ='0';
   more.className = "viewDetails";
+  more.setAttribute('aria-label', "view details of" + restaurant.name);
   li.append(more);
 
   return (li)
