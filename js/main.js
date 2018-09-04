@@ -230,7 +230,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 //https://developers.google.com/web/fundamentals/primers/service-workers/
 
 if ('serviceWorker' in navigator){
-window.addEventListener('load', function(){
+
   navigator.serviceWorker
     .register('./service-worker.js', {scope: './'})
     .then(function(registration){
@@ -238,7 +238,5 @@ window.addEventListener('load', function(){
     })
     .catch(function(err) {
       console.log("Service Worker Failed to Register", err);
-    });
-});
-
+    })
   }

@@ -30,35 +30,50 @@ const urlsCache = [
   '/js/restaurant_info.js',
   '/index.html',
   '/restaurant.html',
-];
+]
 
  //service worker install
  //https://developers.google.com/web/fundamentals/primers/service-workers/
  //https://www.youtube.com/watch?v=BfL3pprhnms
 
- self.addEventListener('install', function(e){
+ self.addEventListener('install', function(event){
    console.log("[serviceworker] Installed")
-   e.waitUntil(
+   event.waitUntil(
      caches.open(cacheName).then(function(cache) {
         console.log("[serviceworker] Caching urlsCache");
-        //return cache.addAll(urlsCache);
+        return cache.addAll(urlsCache);
       })
    )
  })
 
-self.addEventListener('activate', function(e){
+self.addEventListener('activate', function(event){
   console.log("[serviceworker] Activated")
+
+  event.waitUntil(
+
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(cacheNames.map(function(thisCacheName){
+
+          if (thisCacheName !== cacheName) {
+              console.log("[serviceworker] removing cached files from ", thisCacheName);
+              return caches.delete(thisCacheName);
+          }
+
+      }))
+    })
+  )
 })
 
- self.addEventListener('fetch', function(e){
-   console.log("[serviceworker] Fetching", e.request.url);
-   /*e.respondWith(
-     caches.match(e.request)
-      .then(function(response) {
+ self.addEventListener('fetch', function(event){
+   console.log("[serviceworker] Fetching", event.request.url);
+
+    event.respondWith(
+     caches.match(event.request).then(function(response) {
         if (response) {
+          console.log("[Serviceworker] found in cache", event.request.url);
           return response;
         }
-        return fetch(e.request);
+        return fetch(event.request);
       })
-   );*/
- });
+   )
+ })
