@@ -4,10 +4,6 @@
  */
 
 
-/*self.addEventListener('fetch', function(){
-  fetchRestaurants()
-});*/
-
 const cacheName = 'restaurant-pages';
 const urlsCache = [
   '/',
@@ -36,26 +32,26 @@ const urlsCache = [
  //https://developers.google.com/web/fundamentals/primers/service-workers/
  //https://www.youtube.com/watch?v=BfL3pprhnms
 
- self.addEventListener('install', function(event){
-   console.log("[serviceworker] Installed")
-   event.waitUntil(
+ self.addEventListener('install', function(e){
+   console.log("Service Worker Installed")
+   e.waitUntil(
      caches.open(cacheName).then(function(cache) {
-        console.log("[serviceworker] Caching urlsCache");
+        console.log("Service Worker Caching urlsCache");
         return cache.addAll(urlsCache);
       })
    )
  })
 
-self.addEventListener('activate', function(event){
-  console.log("[serviceworker] Activated")
+self.addEventListener('activate', function(e){
+  console.log("Service Worker Activated")
 
-  event.waitUntil(
+  e.waitUntil(
 
     caches.keys().then(function(cacheNames) {
       return Promise.all(cacheNames.map(function(thisCacheName){
 
           if (thisCacheName !== cacheName) {
-              console.log("[serviceworker] removing cached files from ", thisCacheName);
+              console.log("Service Worker removing cached files from ", thisCacheName);
               return caches.delete(thisCacheName);
           }
 
@@ -64,16 +60,30 @@ self.addEventListener('activate', function(event){
   )
 })
 
- self.addEventListener('fetch', function(event){
-   console.log("[serviceworker] Fetching", event.request.url);
+ self.addEventListener('fetch', function(e){
+   console.log("Service Worker Fetching", e.request.url);
 
-    event.respondWith(
-     caches.match(event.request).then(function(response) {
+    e.respondWith(
+     caches.match(e.request).then(function(response) {
         if (response) {
-          console.log("[Serviceworker] found in cache", event.request.url);
+          console.log("Service Worker found in cache", e.request.url);
           return response;
         }
-        return fetch(event.request);
+
+        var requestClone = e.request.clone();
+        fetch(requestClone).then(function(response) {
+          if (!response) {
+            console.log ("Service Worker no response from fetch");
+            return response;
+          }
+          var responseClone = response.clone();
+          caches.open(cacheName).then(function(cache){
+              cache.put(e.request, responseClone);
+              return response;
+          });
+        })
+        return fetch(e.request);
+
       })
    )
  })
