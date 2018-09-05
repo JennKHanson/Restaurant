@@ -69,7 +69,6 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     const option = document.createElement('option');
     option.innerHTML = cuisine;
     option.value = cuisine;
-  /*option.setAttribute('aria-label', "view details of" + restaurant.name);*/
     select.append(option);
   });
 }
@@ -94,6 +93,10 @@ initMap = () => {
 
   updateRestaurants();
 }
+
+/**
+ * Uncomment if using Google Maps
+ */
 /*
   window.initMap = () => {
   let loc = {
@@ -175,7 +178,6 @@ createRestaurantHTML = (restaurant) => {
   const name = document.createElement('h3');//was h1
   name.innerHTML = restaurant.name;
   li.append(name);
-  name.tabIndex ='0';
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
@@ -213,7 +215,10 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 
 }
 
-/* Google Maps
+/**
+ * Uncomment if using Google Maps
+ */
+/*
 addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
@@ -232,7 +237,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 if ('serviceWorker' in navigator){
 //registering service worker as soon as app starts
   navigator.serviceWorker
-  .register('./service-worker.js', {scope: './'}) //is actually default scope 
+  .register('./service-worker.js', {scope: './'}) //is actually default scope
     .then(function(registration){
       console.log("Service Worker Registered", registration);
     })
