@@ -230,9 +230,9 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 //https://developers.google.com/web/fundamentals/primers/service-workers/
 
 if ('serviceWorker' in navigator){
-
+//registering service worker as soon as app starts
   navigator.serviceWorker
-    .register('./service-worker.js', {scope: './'})
+  .register('./service-worker.js', {scope: './'}) //is actually default scope 
     .then(function(registration){
       console.log("Service Worker Registered", registration);
     })

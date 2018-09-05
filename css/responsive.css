@@ -5,7 +5,7 @@
 
  @charset "utf-8";
 
-/* == DESKTOPS, SOME LAPTOPS, IPAD === */
+/* == DESKTOPS, LAPTOPS, IPAD === */
 
 @media screen and (min-width: 950px) {
     #nav {
@@ -70,7 +70,7 @@
         display: table;
         padding: 20px;
         width: 100%;
-    };
+    }
 }
 
   /* === TABLETS === */
@@ -140,6 +140,8 @@
 
 }
 
+/* === TABLETS AND LARGE PHONES=== */
+
 @media screen and (min-width: 551px) and (max-width: 720px) {
     .main-title {
         font-size: 1.5em;
@@ -171,7 +173,7 @@
 
     #restaurants-list {
         width: 100%;
-    };
+    }
 }
 
 
