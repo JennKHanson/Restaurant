@@ -7,7 +7,7 @@
 const cacheName = 'restaurant-pages';
 const urlsCache = [
   '/',
-  '/css/styles.css',
+  '/css/responsive.css',
   '/css/responsiveinside.css',
   '/css/styles.css',
   '/data/restaurants.json',
@@ -33,18 +33,18 @@ const urlsCache = [
  //https://www.youtube.com/watch?v=BfL3pprhnms
 
 //listener for install event
- self.addEventListener('install', function(event){
-   console.log("Service Worker Installed")
-   //promise -- install after urls are cached
-   event.waitUntil(
-     //open cache
-     caches.open(cacheName).then(function(cache) {
-        console.log("Service Worker Caching urlsCache");
-      //fetches urls and adds them to cache
-        return cache.addAll(urlsCache);
-      })
-   )
- })
+self.addEventListener('install', function(event){
+ console.log("Service Worker Installed")
+ //promise -- install after urls are cached
+ event.waitUntil(
+   //open cache
+   caches.open(cacheName).then(function(cache) {
+      console.log("Service Worker Caching urlsCache");
+    //fetches urls and adds them to cache
+      return cache.addAll(urlsCache);
+    })
+ )
+})
 
 //listener for activate event
 self.addEventListener('activate', function(event){
@@ -70,7 +70,6 @@ self.addEventListener('activate', function(event){
    console.log("Service Worker Fetching", event.request.url);
     //responding with entry from cache, if it exists
     event.respondWith(
-      //check to see if url is in cache
      caches.match(event.request).then(function(response) {
         if (response) {
           console.log("Service Worker found in cache");
