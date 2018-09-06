@@ -30,3 +30,6 @@ https://developers.google.com/web/fundamentals/primers/service-workers/
 * How to Setup a Basic Service Worker (with Caching)
 This video was very helpful
 https://www.youtube.com/watch?v=BfL3pprhnms
+
+* Documentation on put()
+https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/put
