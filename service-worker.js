@@ -35,4 +35,29 @@ const urlsCache = [
 //listener for install event
 self.addEventListener('install', function(e) {
   //perform install steps
+  e.waitUntil(
+    caches.open(cacheName)
+    .then(function(cache) {
+      console.log('Cache opened');
+      //passing in array of urls
+      return cache.addAll(urlsCache);
+      //console.log('Service Worker Installed')
+    })
+  );
+});
+
+//
+self.addEventListener('fetch', function(e) {
+  e.respondWith(
+    caches.match(e.request)
+      .then(function(response) {
+        //cache hit -return response
+        if (response) {
+          return response;
+        }
+        return fetch(e.request);
+        console.log('Service Worker Fetched');
+      }
+    )
+  );
 });
