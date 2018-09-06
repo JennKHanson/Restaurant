@@ -34,7 +34,7 @@ const urlsCache = [
 
 //listener for install event
 self.addEventListener('install', function(e) {
-  //perform install steps
+  //wait until installation
   e.waitUntil(
     caches.open(cacheName)
     .then(function(cache) {
@@ -46,16 +46,22 @@ self.addEventListener('install', function(e) {
   );
 });
 
-//
+//listener for fetch event
 self.addEventListener('fetch', function(e) {
   e.respondWith(
+    //if url matches, then
     caches.match(e.request)
       .then(function(response) {
-        //cache hit -return response
+        //is url matches, return cached url
         if (response) {
+          console.log(e.request, ' is in the cache');
           return response;
         }
-        return fetch(e.request);
+        else {
+          //if url is not in cache, return url
+          console.log(e.request, ' is not in the cache')
+          return fetch(e.request);
+      }
         console.log('Service Worker Fetched');
       }
     )
